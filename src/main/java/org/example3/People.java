@@ -1,7 +1,23 @@
-package org.example2;
+package org.example3;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class People {
-    private String name;
+    private String name = "Ivan";
+    /* 1-й способ связи
+    @Autowired
+    private Dog mydog;*/
+/*
+    2-й сп связи
+    private final Dog mydog;
+
+    @Autowired
+    public People(Dog dog){
+        mydog = dog;
+    }
+    */
     private Dog mydog;
 
     public String getName() {
@@ -16,6 +32,7 @@ public class People {
         return mydog;
     }
 
+    @Autowired
     public void setDog(Dog mydog) {
         this.mydog = mydog;
     }

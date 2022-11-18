@@ -1,8 +1,11 @@
-package org.example2;
+package org.example5;
 
-public class People {
-    private String name;
-    private Dog mydog;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Dog {
+
+    private String name = "Tuzik";
 
     public String getName() {
         return name;
@@ -12,17 +15,9 @@ public class People {
         this.name = name;
     }
 
-    public Dog getDog() {
-        return mydog;
-    }
-
-    public void setDog(Dog mydog) {
-        this.mydog = mydog;
-    }
-
     @Override
     public String toString() {
-        return "People{" +
+        return "Dog{" +
                 "name='" + name + '\'' +
                 '}';
     }
